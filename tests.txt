@@ -1,0 +1,7 @@
+['if', ['and', ['not', 'R'], 'B'], 'W']
+['not', ['if', ['if', ['or', 'P', ['not', 'Q']], 'R'], ['and', 'P', 'R']]]
+['or', ['not', ['if', 'P', 'Q']], ['if', 'R', 'P']]
+['not', ['not', ['not', ['not', ['not', 'P']]]]]
+['and', 'A', 'A', 'B', 'C']
+['and', 'P', ['not', 'P']]
+['and', ['if', 'P', 'Q'], ['and', 'P', ['not', 'Q']]]
