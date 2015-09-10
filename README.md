@@ -1,26 +1,22 @@
 DPLL : Boolean satisfiability for propositional logic in Python
 Andrew S. Gordon
-June 2015
+June & September 2015 
 
 I was the co-instructor of the big masters-level Artificial Intelligence course in the Spring of 2015 at the University of Southern California, for eight lectures on formal logic. For their logic programming assignment, I had all 352 students convert propositional logic sentences into conjunctive normal form, then determine their satisfiability using the DPLL algorithm. In order to make sure the programming assignment was feasible, I wrote my own solution in Python. My solution was certainly not the best among those that were submitted, but I have a certain sympathy for the code I wrote. 
 
-After the course was over, I wrote a simple parser so that I could apply my code to the LISP-style notation that I preferred. It was a great learning exercise for me, as I had never worked with LEX and YACC before, and needed to learn it for another project I was working on. With the parser in front, I now have a handy tool that I can use to quickly check the satisfiability of any propositional formula.
+After the course was over, I wrote a simple parser so that I could apply my code to the LISP-style notation that I preferred. It was a great learning exercise for me, as I had never worked with LEX and YACC before, and needed to learn it for another project I was working on. With the parser in front, I now have a handy tool that I can use to quickly check the satisfiability of any propositional formula. Later that year, I realized that constructing parser compilers was overkill for what needed, and replaced the parser with a much simpler version.
 
 Example 1:
-> echo "(and (if P Q) P (not Q))" | python propply.py | python cnf.py | python dpll.py
+> echo "(and (if P Q) P (not Q))" | python propparse.py | python cnf.py | python dpll.py
 False
 
 Example 2:
-cat tests.lisp | python propply.py | python cnf.py | python dpll.py
+cat tests.lisp | python propparse.py | python cnf.py | python dpll.py
 
 cat tests.lisp |   	# lisp style, multiple sentences, ;;; comments
- python propply.py | 	# construct list of sentences in list format
+ python propparse.py | 	# construct list of sentences in list format
  python cnf.py |    	# convert sentences into conjunctive normal form
  python dpll.py      	# find satisfying truth values for each sentence
-
-Requirements: 
- PLY parser library from David Beazley https://github.com/dabeaz/ply
-  > pip install ply
 
 =====
 
