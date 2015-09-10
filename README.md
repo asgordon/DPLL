@@ -7,10 +7,12 @@ I was the co-instructor of the big masters-level Artificial Intelligence course 
 After the course was over, I wrote a simple parser so that I could apply my code to the LISP-style notation that I preferred. It was a great learning exercise for me, as I had never worked with LEX and YACC before, and needed to learn it for another project I was working on. With the parser in front, I now have a handy tool that I can use to quickly check the satisfiability of any propositional formula. Later that year, I realized that constructing parser compilers was overkill for what needed, and replaced the parser with a much simpler version.
 
 Example 1:
+
     > echo "(and (if P Q) P (not Q))" | python propparse.py | python cnf.py | python dpll.py
     False
 
 Example 2:
+
     cat tests.lisp | python propparse.py | python cnf.py | python dpll.py
 
      cat tests.lisp |   	# lisp style, multiple sentences, ;;; comments
