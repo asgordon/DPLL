@@ -139,7 +139,7 @@ if __name__ == "__main__":
 
     sentences = fileinput.input()
     for l in sentences:
-        print repr(dpll(eval(l.strip())))
+        print(repr(dpll(eval(l.strip()))))
 
 #    if len(sys.argv) != 3 or sys.argv[1] != "-i":
 #        print("DPLL CNF-SAT solver. Usage: python DPLL.py -i inputfilename")#

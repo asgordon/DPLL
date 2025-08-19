@@ -192,5 +192,5 @@ if __name__ == "__main__":
 
     sentences = fileinput.input()
     for l in sentences:
-        print repr(cnf(eval(l.strip())))
+        print(repr(cnf(eval(l.strip()))))
 

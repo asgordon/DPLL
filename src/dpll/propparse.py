@@ -51,4 +51,4 @@ if __name__ == "__main__":
     outlist = parse(intext)
     #print repr(outtext)
     for l in outlist:
-        print repr(l)
+        print(repr(l))
