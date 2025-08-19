@@ -1,6 +1,6 @@
 [project]
 name = "dpll"
-version = "0.1.0"
+version = "0.2.0"
 authors = [ { name = "Andrew S. Gordon", email = "gordon@ict.usc.edu" } ]
 description = "Boolean satisfiability for propositional logic in Python"
 readme = "README.md"
